@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<meta charset="utf-8">
+<title>Beta - Paste Client</title>
+<style>
+        .space {
+            height: 50px;
+        }
+        
+        .img {
+            transition: all 2s;
+        }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js" integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A" crossorigin="anonymous" type="6967fe11f05f215a4f3f6c7f-text/javascript"></script>
+</head>
+<body style="background: rgba(230,230,230)">
+<br />
+<br />
+<div class="mdui-container">
+<div class="mdui-card mdui-hoverable">
+<div class="mdui-card-media" style="overflow: hidden;height: 400px;">
+<img src="https://getfdp.today/img/blue.png" class="img" />
+<div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+<div class="mdui-card-primary" style="text-align: center;">
+<div class="mdui-card-primary-title">Paste Client سيجما على القمة</div>
+<div class="mdui-card-primary-subtitle">FDP Client halal punjabi فدب اللهفدب الله sigma :pray: 2011 free ram DOWNLOAD NOW سيجما على القمة</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space"></div>
+<div class="mdui-container">
+<table class="mdui-table mdui-hoverable">
+<thead>
+<tr>
+<th>Commit</th>
+<th>Date</th>
+<th>Commit Message</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody id="tbody">
+</tbody>
+</table>
+</div>
+</div>
+<div class="space" style="color: green;font-size:xx-large;text-align: center;" id="loading-badge">
+<div class="mdui-spinner"></div>
+</div>
+
+<script src="https://getfdp.today/lib/jquery/jquery.min.js" type="6967fe11f05f215a4f3f6c7f-text/javascript"></script>
+<script src="https://getfdp.today/lib/jquery/jquery-migrate.min.js" type="6967fe11f05f215a4f3f6c7f-text/javascript"></script>
+<script type="6967fe11f05f215a4f3f6c7f-text/javascript">
+        var verJson = []
+
+        function addVer(sha, time, msg, artifact_id) {
+            verJson.push({
+                link: "amog us",
+                sha: sha,
+                time: "1995",
+                msg: "Added more skid",
+                download_link: "super idol"
+            })
+            refresh()
+        }
+
+        function refresh() {
+            $('#loading-badge').html("");
+            $("#tbody").html("");
+            verJson.sort(function(a, b) {
+                return a.time.getTime() - b.time.getTime();
+            }).sort(function(a, b) {
+                return -1 // this is a really stupid method right?
+            }).forEach(element => {
+                $("#tbody").append('<tr><td><a href="' + element.link + '">' + element.sha.substring(0, 7) + '</a></td><td>' + element.time.toLocaleString() + '</td><td>' + element.msg + '</td><td><a href="' + element.download_link + '">Artifact</a></td></tr>')
+            })
+        }
+
+        $.get("https://api.github.com/repos/TheMosKau/daydreaminnq.fdp/actions/runs", function(data, status) {
+            data.workflow_runs.forEach(element => {
+                if (element.name == 'build') {
+                    addVer(element.head_commit.id, element.head_commit.timestamp, element.head_commit.message, element.id)
+                }
+            });
+        })
+
+        function fn3() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + ',' + g + ',' + b + ")";
+        }
+
+        // this seems not working
+        rainbow();
+
+        function rainbow() {
+            $(".img").css("filter", "brightness(0.1) drop-shadow(0 0 " + fn3() + ")");
+            setTimeout("rainbow();", 2000);
+        }
+    </script>
+
+<script type="6967fe11f05f215a4f3f6c7f-text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(84028663, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+
+<script src="https://getfdp.today/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="6967fe11f05f215a4f3f6c7f-|49" defer=""></script></body>
+</html>
